@@ -1,0 +1,7 @@
+{
+  "interval": 1,
+  "fail_retry": 5,
+  "sentinel_ip": "127.0.0.1",
+  "todo_command": "ls",
+  "log_level": "info"
+}
