@@ -1,0 +1,16 @@
+[Unit]
+Description=Ping Sentinel
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/sentinel -c config.json
+User=root
+Group=root
+Restart=on-failure
+RestartSec=5s
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=ping_sentinel
+
+[Install]
+WantedBy=multi-user.target
